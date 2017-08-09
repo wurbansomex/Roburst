@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<roburst_profiles>
+
+  <last_edit_date>09 May 2016 12:34:16</last_edit_date>
+
+  <profiles>
+  
+    <profile>
+
+      <name>SampleProfile</name>
+      <number>1</number>
+      <bottle_height>100</bottle_height>
+      <label_height>2</label_height>
+      <finish_height>1</finish_height>
+      <bottle_volume>200</bottle_volume>
+      <low_burst_value>1</low_burst_value>
+      <neck_burst_size>100</neck_burst_size>
+      <pressure_units>barG</pressure_units>
+      <p60_or_pr>p60</p60_or_pr>
+      <ramp_rate1>111</ramp_rate1>
+      <pressure_setpoint1>12</pressure_setpoint1>
+      <dwell_time1></dwell_time1>
+      <ramp_rate2>111</ramp_rate2>
+      <pressure_setpoint2>12</pressure_setpoint2>
+      <dwell_time2></dwell_time2>
+    
+   
+    </profile>
+
+  </profiles>
+  
+</roburst_profiles>

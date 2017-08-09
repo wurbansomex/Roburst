@@ -1,0 +1,17 @@
+0=Bestaat geen vertaling voor bericht nummer {0}.
+1=Je moet de machine worden gestopt voordat u de handmatige modus
+2=is de machine vrij van flessen?
+3=Bevestiging vereist
+4=Verwijder de drukmeter
+5=Meetkaliber verwijderen
+6=Stop Machine
+7=Ophalen vorm nummer...
+8=Er zijn geen vrije slots
+9=Ingevoerde hoeveelheid overschrijdt het aantal vrije plaatsen
+10=bezig met afsluiten...
+11=Opslaan van resultaten naar xml bestand mislukt
+12=Kan geen resultaten map aanmaken
+13=Er is een fout opgetreden bij het genereren van resultaten bestand
+14=Fout bij het starten van externe verbindingen beheer:
+15=Voer een een geldig IP-adres in
+16=Opvragen vormen set.....

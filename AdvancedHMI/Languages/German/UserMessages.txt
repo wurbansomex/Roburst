@@ -1,0 +1,17 @@
+0=Keine Übersetzung für Meldungsnummer {0} vorhanden.
+1=Sie müssen die Maschine stoppen, bevor Sie den manuellen Modus aufrufen
+2=Sind keine Flaschen mehr in der Maschine?
+3=Bestätigung erforderlich
+4=Bitte entfernen Sie das Manometer
+5=Manometer entfernen
+6=Maschine stoppen
+7=Formnummer wird abgerufen ...
+8=Keine freien Plätze
+9=Eingegebene Menge übersteigt die Anzahl der freien Plätze
+10=Abschaltung läuft ...
+11=Fehler beim Speichern der Ergebnisse in xml-Datei
+12=Ergebnis-Verzeichnispfad konnte nicht erstellt werden:
+13=Fehler beim Erzeugen der Ergebnisdatei(en):
+14=Fehler beim Starten des Fernverbindungs-Managers:
+15=Bitte geben Sie eine gültige IP-Adresse ein
+16=Form-Set wird angefordert ...

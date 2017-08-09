@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13A180B0-1183-4CB7-AC14-BF98320A30E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MfgControl.AdvancedHMI.My.MyApplication</StartupObject>
+    <RootNamespace>MfgControl.AdvancedHMI</RootNamespace>
+    <AssemblyName>Somex.Roburst.HMI</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Somex.Roburst.HMI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for AdvancedHMI.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Somex.Roburst.HMI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <CodeAnalysisRuleSet>Migrated rules for AdvancedHMI.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MfgControl.AdvancedHMI.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AdvancedHMIControls\support\MfgControl.AdvancedHMI.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="MfgControl.AdvancedHMI.Drivers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AdvancedHMIDrivers\Support\MfgControl.AdvancedHMI.Drivers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.XML.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmManager.vb" />
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="base_splashScreen.Designer.vb">
+      <DependentUpon>base_splashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_splashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_home.Designer.vb">
+      <DependentUpon>base_home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_alarms.Designer.vb">
+      <DependentUpon>base_alarms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_alarms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_io_2.Designer.vb">
+      <DependentUpon>base_io_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_io_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_io_5.Designer.vb">
+      <DependentUpon>base_io_5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_io_5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_io_4.Designer.vb">
+      <DependentUpon>base_io_4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_io_4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_load.Designer.vb">
+      <DependentUpon>base_load.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_load.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_manual_2.Designer.vb">
+      <DependentUpon>base_manual_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_manual_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_manual_3.Designer.vb">
+      <DependentUpon>base_manual_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_manual_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_rec_edit.Designer.vb">
+      <DependentUpon>base_rec_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_rec_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_results.Designer.vb">
+      <DependentUpon>base_results.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_results.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_manual.Designer.vb">
+      <DependentUpon>base_manual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_manual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_io.Designer.vb">
+      <DependentUpon>base_io.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_io.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_devices.Designer.vb">
+      <DependentUpon>base_devices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_devices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_calibration.Designer.vb">
+      <DependentUpon>base_calibration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_calibration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_settings.Designer.vb">
+      <DependentUpon>base_settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_sec.Designer.vb">
+      <DependentUpon>base_sec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_sec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_help.Designer.vb">
+      <DependentUpon>base_help.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_help.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_io_3.Designer.vb">
+      <DependentUpon>base_io_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_io_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_verification.Designer.vb">
+      <DependentUpon>base_verification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_verification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_alarms_history.Designer.vb">
+      <DependentUpon>base_alarms_history.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_alarms_history.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_settings_2.Designer.vb">
+      <DependentUpon>base_settings_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_settings_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="base_settings_3.Designer.vb">
+      <DependentUpon>base_settings_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="base_settings_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop_turret_moulds.Designer.vb">
+      <DependentUpon>pop_turret_moulds.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_turret_moulds.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HmiSettingsResolver.vb" />
+    <Compile Include="OnScreenKeyBoardViewer.vb" />
+    <Compile Include="PLCSettingsRepository.vb" />
+    <Compile Include="pop_simple_dialog.Designer.vb">
+      <DependentUpon>pop_simple_dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_simple_dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlcDriverUtilities.vb" />
+    <Compile Include="pop_mould_number_entry.Designer.vb">
+      <DependentUpon>pop_mould_number_entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_mould_number_entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="pop_profile_number.Designer.vb">
+      <DependentUpon>pop_profile_number.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_profile_number.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfileManager.vb" />
+    <Compile Include="RemoteDataManager.vb" />
+    <Compile Include="pop_low_burst_timeout.Designer.vb">
+      <DependentUpon>pop_low_burst_timeout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_low_burst_timeout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportResults.vb" />
+    <Compile Include="getSecurityAccessLevel.vb" />
+    <Compile Include="LanguageManager.vb" />
+    <Compile Include="pop_cav_entry.Designer.vb">
+      <DependentUpon>pop_cav_entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_cav_entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop_rec_loaded.Designer.vb">
+      <DependentUpon>pop_rec_loaded.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_rec_loaded.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangeButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="p1_home.Designer.vb">
+      <DependentUpon>p1_home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="p1_home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop_log_in_out.Designer.vb">
+      <DependentUpon>pop_log_in_out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_log_in_out.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop_password_enter.Designer.vb">
+      <DependentUpon>pop_password_enter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pop_password_enter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rec_name_edit.Designer.vb">
+      <DependentUpon>rec_name_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rec_name_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialResultsExporter.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="base_splashScreen.resx">
+      <DependentUpon>base_splashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_home.resx">
+      <DependentUpon>base_home.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_alarms.resx">
+      <DependentUpon>base_alarms.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_io_2.resx">
+      <DependentUpon>base_io_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_io_5.resx">
+      <DependentUpon>base_io_5.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_io_4.resx">
+      <DependentUpon>base_io_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_load.resx">
+      <DependentUpon>base_load.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_manual_2.resx">
+      <DependentUpon>base_manual_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_manual_3.resx">
+      <DependentUpon>base_manual_3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_rec_edit.resx">
+      <DependentUpon>base_rec_edit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_results.resx">
+      <DependentUpon>base_results.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_manual.resx">
+      <DependentUpon>base_manual.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_io.resx">
+      <DependentUpon>base_io.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_devices.resx">
+      <DependentUpon>base_devices.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_calibration.resx">
+      <DependentUpon>base_calibration.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_settings.resx">
+      <DependentUpon>base_settings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_sec.resx">
+      <DependentUpon>base_sec.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_help.resx">
+      <DependentUpon>base_help.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_io_3.resx">
+      <DependentUpon>base_io_3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_verification.resx">
+      <DependentUpon>base_verification.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_alarms_history.resx">
+      <DependentUpon>base_alarms_history.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_settings_2.resx">
+      <DependentUpon>base_settings_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="base_settings_3.resx">
+      <DependentUpon>base_settings_3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_turret_moulds.resx">
+      <DependentUpon>pop_turret_moulds.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_simple_dialog.resx">
+      <DependentUpon>pop_simple_dialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_mould_number_entry.resx">
+      <DependentUpon>pop_mould_number_entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_profile_number.resx">
+      <DependentUpon>pop_profile_number.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_low_burst_timeout.resx">
+      <DependentUpon>pop_low_burst_timeout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_cav_entry.resx">
+      <DependentUpon>pop_cav_entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_rec_loaded.resx">
+      <DependentUpon>pop_rec_loaded.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="p1_home.resx">
+      <DependentUpon>p1_home.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_log_in_out.resx">
+      <DependentUpon>pop_log_in_out.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop_password_enter.resx">
+      <DependentUpon>pop_password_enter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rec_name_edit.resx">
+      <DependentUpon>rec_name_edit.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Java Test Client.zip" />
+    <None Include="Log4netConfig.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SampleINIfiles\CLX.ini" />
+    <None Include="SampleINIfiles\TC.ini" />
+    <None Include="Documents\ICommComponentInterface.pdf" />
+    <None Include="Documents\MatrikonSimulator.pdf" />
+    <None Include="Documents\MotorControlAppMicroLogix.pdf" />
+    <None Include="Documents\OPCCommUsage.pdf" />
+    <None Include="Documents\QuickStart.pdf" />
+    <None Include="Documents\TwinCATDriverSetting.pdf" />
+    <None Include="Documents\UsingAdvancedHMIwithRSLogixEmulator500.pdf" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="settings.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Languages\Flags\English.png" />
+    <None Include="Languages\Flags\France.png" />
+    <None Include="Languages\Flags\Germany.png" />
+    <None Include="Languages\Flags\Spain.png" />
+    <None Include="Languages\Flags\Netherlands.png" />
+    <None Include="Images\save.png" />
+    <None Include="Images\trigger.png" />
+    <Content Include="Languages\Dutch\Alarms.txt" />
+    <Content Include="Languages\Dutch\Controls.txt" />
+    <Content Include="Languages\Dutch\UserMessages.txt" />
+    <Content Include="Languages\English\Alarms.txt" />
+    <Content Include="Languages\English\Controls.txt" />
+    <Content Include="Languages\English\UserMessages.txt" />
+    <None Include="Languages\Flags\Italy.png" />
+    <Content Include="Languages\French\Alarms.txt" />
+    <Content Include="Languages\French\Controls.txt" />
+    <Content Include="Languages\French\UserMessages.txt" />
+    <Content Include="Languages\German\Alarms.txt" />
+    <Content Include="Languages\German\Controls.txt" />
+    <Content Include="Languages\German\UserMessages.txt" />
+    <Content Include="Languages\Italian\Alarms.txt" />
+    <Content Include="Languages\Italian\Controls.txt" />
+    <Content Include="Languages\Italian\UserMessages.txt" />
+    <Content Include="Languages\Spanish\Alarms.txt" />
+    <Content Include="Languages\Spanish\Controls.txt" />
+    <Content Include="Languages\Spanish\UserMessages.txt" />
+    <None Include="Resources\bottle53.png" />
+    <None Include="Resources\bottled.png" />
+    <None Include="Resources\close47.png" />
+    <None Include="Resources\banner_800x62.png" />
+    <None Include="Resources\close47-24.png" />
+    <None Include="Resources\bell72.png" />
+    <None Include="Resources\arrow427.png" />
+    <None Include="Resources\arrow413.png" />
+    <None Include="Resources\banner_600.png" />
+    <None Include="Resources\bellRed.png" />
+    <None Include="Resources\Conveyor View.bmp" />
+    <None Include="Resources\Conveyor View_Small.bmp" />
+    <None Include="Resources\Cullet Bin.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\ackAlarms.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\Data-Edit.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\ajax-loader.gif" />
+    <None Include="Resources\ajax-loader %281%29.gif" />
+    <Content Include="Profiles.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\delete_profile.png" />
+    <None Include="Resources\CzechFlag.png" />
+    <None Include="Resources\bottleNew.png" />
+    <Content Include="Resources\down126.png" />
+    <None Include="Resources\medicine37.png" />
+    <None Include="Resources\material-design\png\back57.png" />
+    <None Include="Resources\save20.png" />
+    <None Include="Resources\house129.png" />
+    <None Include="Resources\left15.png" />
+    <None Include="Resources\innovation.png" />
+    <None Include="Resources\left222.png" />
+    <None Include="Resources\Pick Unit View.bmp" />
+    <None Include="Resources\new_profile.png" />
+    <Content Include="Resources\plain17.png" />
+    <Content Include="Resources\play18m.png" />
+    <Content Include="Resources\play18t.png" />
+    <None Include="Resources\right11.png" />
+    <None Include="Resources\Singulation Gate.bmp" />
+    <None Include="Resources\profile_save.png" />
+    <None Include="Resources\profile_paste.png" />
+    <Content Include="Resources\SOMEX AUTOMATION LOGO 200x57.jpg" />
+    <Content Include="Resources\SOMEX banner 800x62.jpg" />
+    <None Include="Resources\thin35.png" />
+    <None Include="Resources\square2-241.png" />
+    <Content Include="Resources\three41-32.png" />
+    <Content Include="Resources\three41-64.png" />
+    <None Include="Resources\unlocked48 %282%29.png" />
+    <None Include="Resources\three411.png" />
+    <None Include="Resources\Turret.bmp" />
+    <None Include="Resources\time.png" />
+    <None Include="Resources\tick.png" />
+    <Content Include="Resources\up7.png" />
+    <Content Include="Resources\update22.png" />
+    <None Include="Resources\write15-241.png" />
+    <None Include="Resources\Wine_bottle_24.png" />
+    <None Include="Resources\Wine_bottle_32.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\wizard.png" />
+    <Content Include="UsageAndLicense.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="support\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdvancedHMIControls\AdvancedHMIControls.vbproj">
+      <Project>{928f9169-93d6-4e5f-8130-c8b1f4d3cc6e}</Project>
+      <Name>AdvancedHMIControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdvancedHMIDrivers\AdvancedHMIDrivers.vbproj">
+      <Project>{1c35364c-105a-4537-9ca1-0fb0dc656944}</Project>
+      <Name>AdvancedHMIDrivers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IdleTimeDetector\IdleTimeDetector.csproj">
+      <Project>{9bcf40b4-6b45-4611-b344-0bba24d9ab61}</Project>
+      <Name>IdleTimeDetector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Somex.Roburst.Ini\Somex.Roburst.Ini.csproj">
+      <Project>{5baec9b4-98be-4316-bf40-bf5733b08e12}</Project>
+      <Name>Somex.Roburst.Ini</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Somex.Roburst.Integration.Common\Somex.Roburst.Integration.Common.csproj">
+      <Project>{14f7d1b8-81b3-4db3-896e-7850701db862}</Project>
+      <Name>Somex.Roburst.Integration.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Somex.Roburst.Integration.Sockets\Somex.Roburst.Integration.iAFIS.csproj">
+      <Project>{4154accf-fc12-4c2e-af0e-f31ccd96e3ca}</Project>
+      <Name>Somex.Roburst.Integration.iAFIS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

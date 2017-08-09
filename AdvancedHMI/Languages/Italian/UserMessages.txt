@@ -1,0 +1,17 @@
+﻿0=No translation for message number {0} exists.
+1=You must stop the machine before entering manual mode
+2=Is the machine clear of bottles?
+3=Confirmation Required
+4=Please remove the pressure gauge
+5=Remove Gauge
+6=Stop Machine
+7=Retrieving Mould Number...
+8=There are no free slots
+9=Quantity Entered Exceeds the Number of free slots
+10=Shutdown in progress...
+11=Failed to saved results to xml file
+12=Could not create results directory path:
+13=Error generating result file(s):
+14=Error starting remote connection manager:
+15=Please enter a valid IP Address
+16=Requesting Mould Set.....
